@@ -884,6 +884,12 @@ class Codebird
             }
             $authorization = 'Authorization: Bearer ' . self::$_oauth_bearer_token;
         }
+
+        if (self::$_oauth_bearer_token!=null)
+        {
+            $authorization = 'Authorization: Bearer ' . self::$_oauth_bearer_token;            
+        }
+
         $request_headers = array();
         if (isset($authorization)) {
             $request_headers[] = $authorization;
